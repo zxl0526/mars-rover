@@ -21,12 +21,12 @@ public class DirectionTest {
     public void should_return_the_SOUTH_when_get_left_direction_given_direction_WEST() {
         assertThat(Direction.WEST.leftDirection(), is(Direction.SOUTH));
     }
-    
+
     @Test
     public void should_return_the_NORTH_when_get_right_direction_given_direction_WEST() {
         assertThat(Direction.WEST.rightDirection(), is(Direction.NORTH));
     }
-    
+
     @Test
     public void should_return_the_EAST_when_get_left_direction_given_direction_SOUTH() {
         assertThat(Direction.SOUTH.leftDirection(), is(Direction.EAST));

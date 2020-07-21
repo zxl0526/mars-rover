@@ -2,36 +2,29 @@ package marsrover;
 
 
 public class MarsRoverPosition {
-    private Coordinates coordinates;
+    private int coordinatesX;
+    private int coordinatesY;
     private Direction direction;
 
     public MarsRoverPosition(int coordinatesX, int coordinatesY, String direction) {
-        this.coordinates = new Coordinates(coordinatesX, coordinatesY);
+        this.coordinatesX = coordinatesX;
+        this.coordinatesY = coordinatesY;
         this.direction = Direction.fromShortName(direction);
     }
 
     public int getCoordinatesX() {
-        return coordinates.getCoordinatesX();
+        return this.coordinatesX;
     }
 
     public int getCoordinatesY() {
-        return coordinates.getCoordinatesY();
+        return this.coordinatesY;
     }
 
     public String getDirectionShortName() {
         return direction.getShortName();
     }
-
-    public void move() {
-        coordinates.moveToward(direction.getShortName());
-    }
-
-    public void turnLeft() {
-        direction = direction.leftDirection();
-    }
-
-    public void turnRight() {
-        direction = direction.rightDirection();
+    public Direction getDirection(){
+        return direction;
     }
 
 }
